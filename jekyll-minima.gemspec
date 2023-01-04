@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name     = "jekyll-minima"
-  spec.version  = "2.5.1"
+  spec.version  = "3.0.0.pre20220104"
   spec.authors  = ["Jakub Jirutka", "Joel Glovier"]
   spec.email    = ["jglovier@github.com"]
 
