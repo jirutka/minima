@@ -5,13 +5,17 @@ on:
 
 jobs:
   test:
-    name: Test with Jekyll ${{ matrix.jekyll }}
+    name: Test with Jekyll ${{ matrix.jekyll }} on Ruby ${{ matrix.ruby }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        jekyll:
-          - '~> 3.9'
-          - '~> 4.2'
+        include:
+          - jekyll: '~> 4.2'
+            ruby: '3.1'
+          - jekyll: '~> 4.2'
+            ruby: '2.7'
+          - jekyll: '~> 3.9'
+            ruby: '2.7'
     env:
       JEKYLL_VERSION: ${{ matrix.jekyll }}
     steps:
@@ -19,7 +23,7 @@ jobs:
 
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7
+          ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
 
       - name: Run tests
@@ -35,7 +39,7 @@ jobs:
 
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7
+          ruby-version: 3.1
           bundler-cache: true
 
       - name: Publish to RubyGems
