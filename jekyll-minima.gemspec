@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-  spec.name     = "minima"
+  spec.name     = "jekyll-minima"
   spec.version  = "2.5.1"
-  spec.authors  = ["Joel Glovier"]
+  spec.authors  = ["Jakub Jirutka", "Joel Glovier"]
   spec.email    = ["jglovier@github.com"]
 
   spec.summary  = "A beautiful, minimal theme for Jekyll."
-  spec.homepage = "https://github.com/jekyll/minima"
+  spec.homepage = "https://github.com/jirutka/minima"
   spec.license  = "MIT"
 
   spec.metadata["plugin_type"] = "theme"

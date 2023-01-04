@@ -17,7 +17,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
         with:
-          repository: jekyll/minima
+          repository: jirutka/minima
           ref: demo-site
       - name: Set up Ruby 2.7
         uses: ruby/setup-ruby@v1
